@@ -1,11 +1,12 @@
 {
   "name": "bg-blake",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Some description",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
