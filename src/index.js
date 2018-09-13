@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import EvenGame from './games/evengame';
 import CalcGame from './games/calcgame';
 import GcdGame from './games/gcdgame';
+import BalanceGame from './games/balancegame';
 
 function getUserName() {
   return readlineSync.question('May I have your name? ');
@@ -56,6 +57,10 @@ const runGcdGame = () => {
   runGame(new GcdGame());
 };
 
+const runBalanceGame = () => {
+  runGame(new BalanceGame());
+};
+
 export {
-  sayHelloToUser, runEvenGame, runCalcGame, runGcdGame,
+  sayHelloToUser, runEvenGame, runCalcGame, runGcdGame, runBalanceGame,
 };
