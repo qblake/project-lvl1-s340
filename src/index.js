@@ -1,7 +1,12 @@
 import readlineSync from 'readline-sync';
+import EvenGame from './games/evengame';
 
 function getUserName() {
   return readlineSync.question('May I have your name? ');
+}
+
+function getUserAnswer() {
+  return readlineSync.question('Your answer: ');
 }
 
 const sayHelloToUser = () => {
@@ -9,19 +14,23 @@ const sayHelloToUser = () => {
   console.log(`Hello, ${name}!`);
 };
 
-const isEven = n => n % 2 === 0;
+const askQuestion = (question) => {
+  console.log(`Question: ${question}`);
+};
 
-const runEvenGame = () => {
+const runGame = (game) => {
+  console.log('Welcome to the Brain Games!');
+
+  game.showWelcomeMessage();
+
   const name = getUserName();
   console.log(`Hello, ${name}!`);
   console.log('');
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
-    const number = Math.floor(Math.random() * 100);
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
-    if ((isEven(number) && answer === 'yes') || (!isEven(number) && answer === 'no')) {
+    askQuestion(game.getQuestion());
+    if (game.isCorrectAnswer(getUserAnswer())) {
       console.log('Correct!');
       correctAnswers += 1;
     } else {
@@ -29,7 +38,12 @@ const runEvenGame = () => {
       correctAnswers = 0;
     }
   }
+  console.log('');
   console.log(`Congratulations, ${name}!`);
+};
+
+const runEvenGame = () => {
+  runGame(new EvenGame());
 };
 
 export { sayHelloToUser, runEvenGame };
