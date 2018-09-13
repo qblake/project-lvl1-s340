@@ -1,4 +1,4 @@
-const getRandomNumber = count => Math.floor(Math.random() * count);
+import getRandomNumber from '../utils/utils';
 
 function CalcGame() {
   this.showWelcomeMessage = () => {
