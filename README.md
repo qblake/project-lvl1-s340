@@ -23,3 +23,8 @@ run `brain-calc`
 run `brain-gcd`
 
 [![asciicast](https://asciinema.org/a/NRIyZqzvM5GUWh1nSnl8slMyX.png)](https://asciinema.org/a/NRIyZqzvM5GUWh1nSnl8slMyX)
+
+### brain-balance game
+run `brain-balance`
+
+[![asciicast](https://asciinema.org/a/pWg8urQu3jAtGT6wnxJDrGHne.png)](https://asciinema.org/a/pWg8urQu3jAtGT6wnxJDrGHne)
