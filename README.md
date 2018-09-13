@@ -13,3 +13,8 @@ run `npm i bg-blake -g`
 run `brain-even`
 
 [![asciicast](https://asciinema.org/a/ZA9yH6GzIZ3Cl4T3uvcfPGMvd.png)](https://asciinema.org/a/ZA9yH6GzIZ3Cl4T3uvcfPGMvd)
+
+### brain-calc game
+run `brain-calc`
+
+[![asciicast](https://asciinema.org/a/TGrVHaPELt6S0MLe15nNE1gFl.png)](https://asciinema.org/a/TGrVHaPELt6S0MLe15nNE1gFl)
