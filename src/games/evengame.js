@@ -1,3 +1,5 @@
+const getRandomNumber = count => Math.floor(Math.random() * count);
+
 const isEven = n => n % 2 === 0;
 
 function EvenGame() {
@@ -7,7 +9,7 @@ function EvenGame() {
   };
 
   this.getQuestion = () => {
-    this.number = Math.floor(Math.random() * 100);
+    this.number = getRandomNumber(100);
     return this.number;
   };
 

@@ -1,3 +1,5 @@
+const getRandomNumber = count => Math.floor(Math.random() * count);
+
 const isBalanced = (numbers) => {
   let minNumeral = numbers[0];
   let maxNumeral = numbers[0];
@@ -49,7 +51,7 @@ function BalanceGame() {
   };
 
   this.getQuestion = () => {
-    const number = Math.floor(Math.random() * 100);
+    const number = getRandomNumber(100);
     this.result = findBalancedNumber(number);
     return number;
   };

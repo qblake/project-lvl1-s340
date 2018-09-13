@@ -1,3 +1,5 @@
+const getRandomNumber = count => Math.floor(Math.random() * count);
+
 function CalcGame() {
   this.showWelcomeMessage = () => {
     console.log('What is the result of the expression?');
@@ -5,10 +7,10 @@ function CalcGame() {
   };
 
   this.getQuestion = () => {
-    const firstNumber = Math.floor(Math.random() * 10);
-    const secondNumber = Math.floor(Math.random() * 10);
+    const firstNumber = getRandomNumber(10);
+    const secondNumber = getRandomNumber(10);
 
-    const sign = Math.floor(Math.random() * 3);
+    const sign = getRandomNumber(3);
     switch (sign) {
       case 0:
         this.result = String(firstNumber + secondNumber);
