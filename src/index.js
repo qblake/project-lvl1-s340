@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import EvenGame from './games/evengame';
 import CalcGame from './games/calcgame';
+import GcdGame from './games/gcdgame';
 
 function getUserName() {
   return readlineSync.question('May I have your name? ');
@@ -51,4 +52,10 @@ const runCalcGame = () => {
   runGame(new CalcGame());
 };
 
-export { sayHelloToUser, runEvenGame, runCalcGame };
+const runGcdGame = () => {
+  runGame(new GcdGame());
+};
+
+export {
+  sayHelloToUser, runEvenGame, runCalcGame, runGcdGame,
+};
