@@ -1,10 +1,12 @@
 const isEven = n => n % 2 === 0;
 
 class EvenGame {
-  number;
+  constructor() {
+    this.welcomeMessage = 'Answer "yes" if number even otherwise answer "no".';
+  }
 
-  static showWelcomeMessage() {
-    console.log('Answer "yes" if number even otherwise answer "no".');
+  showWelcomeMessage() {
+    console.log(this.welcomeMessage);
     console.log('');
   }
 

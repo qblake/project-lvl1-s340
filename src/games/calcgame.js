@@ -1,6 +1,10 @@
 class CalcGame {
-  static showWelcomeMessage() {
-    console.log('What is the result of the expression?');
+  constructor() {
+    this.welcomeMessage = 'What is the result of the expression?';
+  }
+
+  showWelcomeMessage() {
+    console.log(this.welcomeMessage);
     console.log('');
   }
 
