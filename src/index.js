@@ -4,13 +4,9 @@ import CalcGame from './games/calcgame';
 import GcdGame from './games/gcdgame';
 import BalanceGame from './games/balancegame';
 
-function getUserName() {
-  return readlineSync.question('May I have your name? ');
-}
+const getUserName = () => readlineSync.question('May I have your name? ');
 
-function getUserAnswer() {
-  return readlineSync.question('Your answer: ');
-}
+const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 const sayHelloToUser = () => {
   const name = getUserName();

@@ -42,25 +42,19 @@ const findBalancedNumber = (number) => {
   return result.join('');
 };
 
-class BalanceGame {
-  constructor() {
-    this.welcomeMessage = 'Balance the given number.';
-  }
-
-  showWelcomeMessage() {
-    console.log(this.welcomeMessage);
+function BalanceGame() {
+  this.showWelcomeMessage = () => {
+    console.log('Balance the given number.');
     console.log('');
-  }
+  };
 
-  getQuestion() {
+  this.getQuestion = () => {
     const number = Math.floor(Math.random() * 100);
     this.result = findBalancedNumber(number);
     return number;
-  }
+  };
 
-  isCorrectAnswer(answer) {
-    return this.result === answer;
-  }
+  this.isCorrectAnswer = answer => this.result === answer;
 }
 
 export default BalanceGame;

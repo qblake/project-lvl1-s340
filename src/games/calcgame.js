@@ -1,14 +1,10 @@
-class CalcGame {
-  constructor() {
-    this.welcomeMessage = 'What is the result of the expression?';
-  }
-
-  showWelcomeMessage() {
-    console.log(this.welcomeMessage);
+function CalcGame() {
+  this.showWelcomeMessage = () => {
+    console.log('What is the result of the expression?');
     console.log('');
-  }
+  };
 
-  getQuestion() {
+  this.getQuestion = () => {
     const firstNumber = Math.floor(Math.random() * 10);
     const secondNumber = Math.floor(Math.random() * 10);
 
@@ -28,11 +24,9 @@ class CalcGame {
     }
 
     return '';
-  }
+  };
 
-  isCorrectAnswer(answer) {
-    return this.result === answer;
-  }
+  this.isCorrectAnswer = answer => this.result === answer;
 }
 
 export default CalcGame;
