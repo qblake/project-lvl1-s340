@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
 
 const isBalanced = (numbers) => {
@@ -47,13 +48,11 @@ const findBalancedNumber = (number) => {
 function BalanceGame() {
   this.getDescription = () => 'Balance the given number.';
 
-  this.getQuestion = () => {
+  this.getQuiz = () => {
     const number = getRandomNumber(100);
-    this.result = findBalancedNumber(number);
-    return number;
+    const balancedNumber = findBalancedNumber(number);
+    return cons(number, balancedNumber);
   };
-
-  this.isCorrectAnswer = answer => this.result === answer;
 }
 
 export default BalanceGame;

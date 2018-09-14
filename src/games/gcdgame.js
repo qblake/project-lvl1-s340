@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
 
 const findGcd = (a, b) => {
@@ -10,16 +11,13 @@ const findGcd = (a, b) => {
 function GcdGame() {
   this.getDescription = () => 'Find the greatest common divisor of given numbers.';
 
-  this.getQuestion = () => {
+  this.getQuiz = () => {
     const firstNumber = getRandomNumber(100) + 1;
     const secondNumber = getRandomNumber(100) + 1;
-
-    this.result = String(findGcd(firstNumber, secondNumber));
-
-    return `${firstNumber} ${secondNumber}`;
+    const question = `${firstNumber} ${secondNumber}`;
+    const answer = String(findGcd(firstNumber, secondNumber));
+    return cons(question, answer);
   };
-
-  this.isCorrectAnswer = answer => this.result === answer;
 }
 
 export default GcdGame;

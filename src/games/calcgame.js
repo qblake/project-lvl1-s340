@@ -1,31 +1,34 @@
+import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
 
 function CalcGame() {
   this.getDescription = () => 'What is the result of the expression?';
 
-  this.getQuestion = () => {
+  this.getQuiz = () => {
     const firstNumber = getRandomNumber(10);
     const secondNumber = getRandomNumber(10);
 
     const sign = getRandomNumber(3);
+    let question = '';
+    let answer = '';
     switch (sign) {
       case 0:
-        this.result = String(firstNumber + secondNumber);
-        return `${firstNumber} + ${secondNumber}`;
+        question = `${firstNumber} + ${secondNumber}`;
+        answer = String(firstNumber + secondNumber);
+        break;
       case 1:
-        this.result = String(firstNumber - secondNumber);
-        return `${firstNumber} - ${secondNumber}`;
+        question = `${firstNumber} - ${secondNumber}`;
+        answer = String(firstNumber - secondNumber);
+        break;
       case 2:
-        this.result = String(firstNumber * secondNumber);
-        return `${firstNumber} * ${secondNumber}`;
+        question = `${firstNumber} * ${secondNumber}`;
+        answer = String(firstNumber * secondNumber);
+        break;
       default:
-        this.result = '';
     }
 
-    return '';
+    return cons(question, answer);
   };
-
-  this.isCorrectAnswer = answer => this.result === answer;
 }
 
 export default CalcGame;

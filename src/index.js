@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 import EvenGame from './games/evengame';
 import CalcGame from './games/calcgame';
 import GcdGame from './games/gcdgame';
@@ -32,8 +33,11 @@ const runGame = (game) => {
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
-    askQuestion(game.getQuestion());
-    if (game.isCorrectAnswer(getUserAnswer())) {
+    const quiz = game.getQuiz();
+    const question = car(quiz);
+    const answer = cdr(quiz);
+    askQuestion(question);
+    if (answer === getUserAnswer()) {
       console.log('Correct!');
       correctAnswers += 1;
     } else {
