@@ -1,10 +1,7 @@
 import getRandomNumber from '../utils/utils';
 
 function CalcGame() {
-  this.showWelcomeMessage = () => {
-    console.log('What is the result of the expression?');
-    console.log('');
-  };
+  this.getDescription = () => 'What is the result of the expression?';
 
   this.getQuestion = () => {
     const firstNumber = getRandomNumber(10);

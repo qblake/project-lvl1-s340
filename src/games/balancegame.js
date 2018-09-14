@@ -45,10 +45,7 @@ const findBalancedNumber = (number) => {
 };
 
 function BalanceGame() {
-  this.showWelcomeMessage = () => {
-    console.log('Balance the given number.');
-    console.log('');
-  };
+  this.getDescription = () => 'Balance the given number.';
 
   this.getQuestion = () => {
     const number = getRandomNumber(100);

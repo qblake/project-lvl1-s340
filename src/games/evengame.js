@@ -3,10 +3,7 @@ import getRandomNumber from '../utils/utils';
 const isEven = n => n % 2 === 0;
 
 function EvenGame() {
-  this.showWelcomeMessage = () => {
-    console.log('Answer "yes" if number even otherwise answer "no".');
-    console.log('');
-  };
+  this.getDescription = () => 'Answer "yes" if number even otherwise answer "no".';
 
   this.getQuestion = () => {
     this.number = getRandomNumber(100);

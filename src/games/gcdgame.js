@@ -8,10 +8,7 @@ const findGcd = (a, b) => {
 };
 
 function GcdGame() {
-  this.showWelcomeMessage = () => {
-    console.log('Find the greatest common divisor of given numbers.');
-    console.log('');
-  };
+  this.getDescription = () => 'Find the greatest common divisor of given numbers.';
 
   this.getQuestion = () => {
     const firstNumber = getRandomNumber(100) + 1;

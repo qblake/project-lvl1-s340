@@ -17,10 +17,14 @@ const askQuestion = (question) => {
   console.log(`Question: ${question}`);
 };
 
-const runGame = (game) => {
+const showWelcomeMessage = (description) => {
   console.log('Welcome to the Brain Games!');
+  console.log(description);
+  console.log('');
+};
 
-  game.showWelcomeMessage();
+const runGame = (game) => {
+  showWelcomeMessage(game.getDescription());
 
   const name = getUserName();
   console.log(`Hello, ${name}!`);
