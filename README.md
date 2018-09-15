@@ -28,3 +28,8 @@ run `brain-gcd`
 run `brain-balance`
 
 [![asciicast](https://asciinema.org/a/pWg8urQu3jAtGT6wnxJDrGHne.png)](https://asciinema.org/a/pWg8urQu3jAtGT6wnxJDrGHne)
+
+### brain-progressive game
+run `brain-progressive`
+
+[![asciicast](https://asciinema.org/a/qgDIWe1LITu2R6CTM2csTKT7A.png)](https://asciinema.org/a/qgDIWe1LITu2R6CTM2csTKT7A)
