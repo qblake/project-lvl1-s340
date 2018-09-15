@@ -11,17 +11,12 @@ const isBalanced = (numbers) => {
 
 const balanceNumber = (array) => {
   const numbers = array;
-  let minNumeralIndex = 0;
-  let maxNumeralIndex = 0;
-  for (let i = 0; i < numbers.length; i += 1) {
-    const numeral = numbers[i];
-    if (numeral < numbers[minNumeralIndex]) {
-      minNumeralIndex = i;
-    }
-    if (numeral > numbers[maxNumeralIndex]) {
-      maxNumeralIndex = i;
-    }
-  }
+  const minNumeral = Math.min(...numbers);
+  const maxNumeral = Math.max(...numbers);
+
+  const minNumeralIndex = numbers.indexOf(minNumeral);
+  const maxNumeralIndex = numbers.indexOf(maxNumeral);
+
   numbers[minNumeralIndex] += 1;
   numbers[maxNumeralIndex] -= 1;
   return numbers;
