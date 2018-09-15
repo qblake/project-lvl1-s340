@@ -46,18 +46,18 @@ const findBalancedNumber = (number) => {
   return result.join('');
 };
 
-function BalanceGame() {
-  this.getDescription = () => 'Balance the given number.';
+const balanceGame = () => ({
+  getDescription: () => 'Balance the given number.',
 
-  this.getQuiz = () => {
+  getQuiz: () => {
     const number = getRandomNumber(100);
     const balancedNumber = findBalancedNumber(number);
     return cons(number, balancedNumber);
-  };
-}
+  },
+});
 
 const runBalanceGame = () => {
-  runGame(new BalanceGame());
+  runGame(balanceGame());
 };
 
 export default runBalanceGame;

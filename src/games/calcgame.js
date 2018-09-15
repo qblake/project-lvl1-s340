@@ -2,10 +2,10 @@ import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
 import { runGame } from '..';
 
-function CalcGame() {
-  this.getDescription = () => 'What is the result of the expression?';
+const calcGame = () => ({
+  getDescription: () => 'What is the result of the expression?',
 
-  this.getQuiz = () => {
+  getQuiz: () => {
     const firstNumber = getRandomNumber(10);
     const secondNumber = getRandomNumber(10);
 
@@ -29,11 +29,11 @@ function CalcGame() {
     }
 
     return cons(question, answer);
-  };
-}
+  },
+});
 
 const runCalcGame = () => {
-  runGame(new CalcGame());
+  runGame(calcGame());
 };
 
 export default runCalcGame;

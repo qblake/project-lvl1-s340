@@ -9,20 +9,20 @@ const findGcd = (a, b) => {
   return a;
 };
 
-function GcdGame() {
-  this.getDescription = () => 'Find the greatest common divisor of given numbers.';
+const gcdGame = () => ({
+  getDescription: () => 'Find the greatest common divisor of given numbers.',
 
-  this.getQuiz = () => {
+  getQuiz: () => {
     const firstNumber = getRandomNumber(100) + 1;
     const secondNumber = getRandomNumber(100) + 1;
     const question = `${firstNumber} ${secondNumber}`;
     const answer = String(findGcd(firstNumber, secondNumber));
     return cons(question, answer);
-  };
-}
+  },
+});
 
 const runGcdGame = () => {
-  runGame(new GcdGame());
+  runGame(gcdGame());
 };
 
 export default runGcdGame;
