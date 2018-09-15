@@ -1,6 +1,6 @@
 {
   "name": "bg-blake",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "Some description",
   "main": "index.js",
   "bin": {
