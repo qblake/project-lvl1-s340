@@ -33,3 +33,8 @@ run `brain-balance`
 run `brain-progressive`
 
 [![asciicast](https://asciinema.org/a/qgDIWe1LITu2R6CTM2csTKT7A.png)](https://asciinema.org/a/qgDIWe1LITu2R6CTM2csTKT7A)
+
+### brain-prime game
+run `brain-prime`
+
+[![asciicast](https://asciinema.org/a/BRirBmlH5jvzs5NkSutNkNB4R.png)](https://asciinema.org/a/BRirBmlH5jvzs5NkSutNkNB4R)
