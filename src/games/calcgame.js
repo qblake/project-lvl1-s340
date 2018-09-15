@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
+import { runGame } from '..';
 
 function CalcGame() {
   this.getDescription = () => 'What is the result of the expression?';
@@ -31,4 +32,8 @@ function CalcGame() {
   };
 }
 
-export default CalcGame;
+const runCalcGame = () => {
+  runGame(new CalcGame());
+};
+
+export default runCalcGame;

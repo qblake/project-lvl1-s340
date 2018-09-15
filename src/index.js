@@ -1,9 +1,5 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-import EvenGame from './games/evengame';
-import CalcGame from './games/calcgame';
-import GcdGame from './games/gcdgame';
-import BalanceGame from './games/balancegame';
 
 const getUserName = () => readlineSync.question('May I have your name? ');
 
@@ -49,22 +45,6 @@ const runGame = (game) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-const runEvenGame = () => {
-  runGame(new EvenGame());
-};
-
-const runCalcGame = () => {
-  runGame(new CalcGame());
-};
-
-const runGcdGame = () => {
-  runGame(new GcdGame());
-};
-
-const runBalanceGame = () => {
-  runGame(new BalanceGame());
-};
-
 export {
-  sayHelloToUser, runEvenGame, runCalcGame, runGcdGame, runBalanceGame,
+  sayHelloToUser, runGame,
 };

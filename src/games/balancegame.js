@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
+import { runGame } from '..';
 
 const isBalanced = (numbers) => {
   let minNumeral = numbers[0];
@@ -55,4 +56,8 @@ function BalanceGame() {
   };
 }
 
-export default BalanceGame;
+const runBalanceGame = () => {
+  runGame(new BalanceGame());
+};
+
+export default runBalanceGame;

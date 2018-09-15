@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../utils/utils';
+import { runGame } from '..';
 
 const findGcd = (a, b) => {
   if (b) {
@@ -20,4 +21,8 @@ function GcdGame() {
   };
 }
 
-export default GcdGame;
+const runGcdGame = () => {
+  runGame(new GcdGame());
+};
+
+export default runGcdGame;
