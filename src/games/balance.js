@@ -32,7 +32,7 @@ const findBalancedNumber = (number) => {
 };
 
 const balanceGame = () => ({
-  getDescription: () => 'Balance the given number.',
+  getDescription: 'Balance the given number.',
 
   getQuiz: () => {
     const number = getRandomNumber(100);

@@ -21,7 +21,7 @@ const showWelcomeMessage = (description) => {
 };
 
 const runGame = (game) => {
-  showWelcomeMessage(game.getDescription());
+  showWelcomeMessage(game.getDescription);
 
   const name = getUserName();
   console.log(`Hello, ${name}!`);

@@ -10,7 +10,7 @@ const findGcd = (a, b) => {
 };
 
 const gcdGame = () => ({
-  getDescription: () => 'Find the greatest common divisor of given numbers.',
+  getDescription: 'Find the greatest common divisor of given numbers.',
 
   getQuiz: () => {
     const firstNumber = getRandomNumber(100) + 1;

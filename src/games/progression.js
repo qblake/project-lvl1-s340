@@ -11,7 +11,7 @@ const getArithmeticProgression = (number) => {
 const getQuestion = (progression, index) => progression.map((v, i) => ((i === index) ? '..' : v)).join(' ');
 
 const progressionGame = () => ({
-  getDescription: () => 'What number is missing in this progression?',
+  getDescription: 'What number is missing in this progression?',
 
   getQuiz: () => {
     const progressionLength = 10;

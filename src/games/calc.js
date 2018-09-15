@@ -3,7 +3,7 @@ import getRandomNumber from '../utils/utils';
 import { runGame } from '..';
 
 const calcGame = () => ({
-  getDescription: () => 'What is the result of the expression?',
+  getDescription: 'What is the result of the expression?',
 
   getQuiz: () => {
     const firstNumber = getRandomNumber(10);
