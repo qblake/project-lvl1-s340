@@ -3,18 +3,8 @@ import getRandomNumber from '../utils/utils';
 import { runGame } from '..';
 
 const isBalanced = (numbers) => {
-  let minNumeral = numbers[0];
-  let maxNumeral = numbers[0];
-  for (let i = 0; i < numbers.length; i += 1) {
-    const numeral = numbers[i];
-    if (numeral < minNumeral) {
-      minNumeral = numeral;
-    }
-    if (numeral > maxNumeral) {
-      maxNumeral = numeral;
-    }
-  }
-
+  const minNumeral = Math.min(...numbers);
+  const maxNumeral = Math.max(...numbers);
   const distance = Math.abs(minNumeral - maxNumeral);
   return distance <= 1;
 };
